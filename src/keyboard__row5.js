@@ -1,29 +1,39 @@
+import { arr } from '../data.js';
+
+let key = 'en';
+
 const row5 = document.createElement("div");   //новое
 row5.classList.add("keyboard__row");
-const lettersRowFive = ["Ctrl", "Win", "Alt", "", "Alt", `${String.fromCharCode(9664)}`, `${String.fromCharCode(9660)}`, `${String.fromCharCode(9658)}`, "Ctrl"];
+//const lettersRowFive = ["Ctrl", "Win", "Alt", "", "Alt", `${String.fromCharCode(9664)}`, `${String.fromCharCode(9660)}`, `${String.fromCharCode(9658)}`, "Ctrl"];
 
-for (let i = 0; i < 9; i++) {
+for (let i = 55; i < 64; i++) {
     const keyboardKey = document.createElement("div");
     keyboardKey.classList.add("keyboard__key");
     keyboardKey.classList.add("key");
     keyboardKey.classList.add("letter-row-five");
-    if (i === 0 || i === 8) {
-        keyboardKey.classList.add("ctrl");
+    if (i === 55) {
+        keyboardKey.classList.add("ctrl-left");
     };
-    if (i === 1) {
+    if (i === 63) {
+        keyboardKey.classList.add("ctrl-right");
+    };
+    if (i === 56) {
         keyboardKey.classList.add("win");
     };
-    if (i === 2 || i === 4) {
-        keyboardKey.classList.add("alt");
-    }
-    if (i === 5 || i === 6 || i === 7) {
+    if (i === 57) {
+        keyboardKey.classList.add("alt-left");
+    };
+    if (i === 59) {
+        keyboardKey.classList.add("alt-right");
+    };
+    if (i === 60 || i === 61 || i === 62) {
         keyboardKey.classList.add("case-down");
-    }
-    if (i === 3) {
+    } ''
+    if (i === 58) {
         keyboardKey.classList.add("space");
     };
 
-    keyboardKey.textContent = lettersRowFive[i];
+    keyboardKey.textContent = arr[i][key];
     row5.append(keyboardKey);
 }
 

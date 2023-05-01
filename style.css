@@ -56,8 +56,12 @@
     background-color: cornflowerblue;
 }
 
-.key:active {
-    background-color: tomato;
+.keyboard__key.active {
+    /*background-color: tomato;*/
+    box-shadow: inset -2px -2px 4px rgb(63, 63, 63),
+        inset 2px 2px 4px black;
+    /* color: yellow;*/
+    background-color: cornflowerblue;
 }
 
 .backspace,
@@ -70,8 +74,10 @@
 
 .tab,
 .del,
-.alt,
-.ctrl,
+.alt-left,
+.alt-right,
+.ctrl-left,
+.ctrl-right,
 .win,
 .case-down {
     font-weight: 600;
@@ -103,4 +109,11 @@
 .language {
     margin: 10px auto;
     text-align: center;
+}
+
+
+.keybord .active {
+    box-shadow: inset -2px -2px 4px rgb(63, 63, 63),
+        inset 2px 2px 4px black;
+    color: yellow;
 }

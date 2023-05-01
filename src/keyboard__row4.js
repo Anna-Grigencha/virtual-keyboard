@@ -1,23 +1,27 @@
+import { arr } from '../data.js';
+
+let key = 'en';
+
 const row4 = document.createElement("div");   //новое
 row4.classList.add("keyboard__row");
-const lettersRowFour = ["Shift", "z", "x", "c", "v", "b", "n", "m", ",", ".", "/", `${String.fromCharCode(9650)}`, "Shift"];
+//const lettersRowFour = ["Shift", "z", "x", "c", "v", "b", "n", "m", ",", ".", "/", `${String.fromCharCode(9650)}`, "Shift"];
 
-for (let i = 0; i < 13; i++) {
+for (let i = 42; i < 55; i++) {
     const keyboardKey = document.createElement("div");
     keyboardKey.classList.add("keyboard__key");
     keyboardKey.classList.add("key");
     keyboardKey.classList.add("letter-row-four");
-    if (i === 0) {
+    if (i === 42) {
         keyboardKey.classList.add("shift-left");
     }
-    if (i === 12) {
+    if (i === 54) {
         keyboardKey.classList.add("shift-right");
     }
-    if (i === 11) {
+    if (i === 53) {
         keyboardKey.classList.add("case-down");
     }
 
-    keyboardKey.textContent = lettersRowFour[i];
+    keyboardKey.textContent = arr[i][key];
     row4.append(keyboardKey);
 }
 
