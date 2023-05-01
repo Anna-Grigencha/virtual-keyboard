@@ -33,7 +33,8 @@ const altRight = document.querySelector(".alt-right");
 const win = document.querySelector("win");
 //const textarea = document.querySelector(".textarea");
 
-
+let key = 'en';
+let lang = 'en';
 document.addEventListener('keydown', function (event) {
     for (let i = 0; i < keyboardKey.length; i++) {
 
@@ -68,6 +69,24 @@ document.addEventListener('keydown', function (event) {
         };
 
     };
+
+    if (event.key === "CapsLock") {
+        for (let i = 0; i < keyboardKey.length; i++) {
+            // if (key === 'en') {
+            console.log(key);
+            if (arr[i].printable === true) {
+                key = 'EN';
+                keyboardKey[i].innerHTML = arr[i][key];
+            };
+            //  }
+
+            /* if (arr[i].printable === true && key === 'EN') {
+                 key = 'en';
+                 keyboardKey[i].innerHTML = arr[i][key];
+             }*/
+        }
+        // key = "EN"
+    }
 
     if (event.key !== "Backspace" && event.key !== "Tab" && event.key !== "CapsLock" && event.key !== "Shift"
         && event.key !== "Control" && event.key !== "Alt" && event.key !== "Enter" && event.key !== "Delete"
@@ -118,26 +137,3 @@ space.addEventListener('mousedown', function () {
 
 
 
-//MouseUp occurs when the user releases the mouse button
-/*for (let y of button) {
-    y.addEventListener(‘mouseup’ , function () {
-        y.className =”
-    })
-}*/
-/*pace.addEventListener(‘mousedown’, function () {
-    space.classList.add(‘active’)
-    p.innerHTML +=” “
-})*/
-/*space.addEventListener(‘mouseup’, function () {
-    space.classList.remove(‘active’)
-})*/
-/*function back() {
-    Backspace.className +=’ active’
-    p.innerHTML = p.innerHTML.slice(0, -1)
-}*/
-//onmousedown attribute fires when a mouse button is pressed down on the element
-//Backspace.onmousedown = back
-//onmouseup event occurs when a user releases a mouse button over an element
-//Backspace.onmouseup = function () {
-  //  Backspace.classList.remove(‘active’)
-/*}*/
