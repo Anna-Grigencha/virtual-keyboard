@@ -79,7 +79,10 @@
 .ctrl-left,
 .ctrl-right,
 .win,
-.case-down {
+.case-down,
+.case-up,
+.case-left,
+.case-right {
     font-weight: 600;
     background-color: #222222;
 }

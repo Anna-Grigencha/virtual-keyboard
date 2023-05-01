@@ -4,7 +4,6 @@ let key = 'en';
 
 const row2 = document.createElement("div");   //новое
 row2.classList.add("keyboard__row");
-//const lettersRowTwo = ["Tab", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[", "]", "/", "Del"];
 
 for (let i = 14; i < 29; i++) {
     const keyboardKey = document.createElement("div");

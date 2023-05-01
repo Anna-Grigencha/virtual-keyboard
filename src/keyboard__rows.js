@@ -2,10 +2,10 @@ import { arr } from '../data.js';
 
 let key = 'en';
 
-const row1 = document.createElement("div");   //новое
-row1.classList.add("keyboard__row");
+const rows = document.createElement("div");   //новое
+rows.classList.add("keyboard__row");
 
-for (let i = 0; i < 14; i++) {
+for (let i = 0; i < 64; i++) {
     const keyboardKey = document.createElement("div");
     keyboardKey.classList.add("keyboard__key");
     keyboardKey.classList.add("key");
@@ -16,8 +16,8 @@ for (let i = 0; i < 14; i++) {
 
     keyboardKey.textContent = arr[i][key];
 
-    row1.append(keyboardKey);
+    rows.append(keyboardKey);
 }
 
 
-export { row1 };
+export { rows };

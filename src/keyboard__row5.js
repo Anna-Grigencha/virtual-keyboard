@@ -4,7 +4,6 @@ let key = 'en';
 
 const row5 = document.createElement("div");   //новое
 row5.classList.add("keyboard__row");
-//const lettersRowFive = ["Ctrl", "Win", "Alt", "", "Alt", `${String.fromCharCode(9664)}`, `${String.fromCharCode(9660)}`, `${String.fromCharCode(9658)}`, "Ctrl"];
 
 for (let i = 55; i < 64; i++) {
     const keyboardKey = document.createElement("div");
@@ -26,9 +25,15 @@ for (let i = 55; i < 64; i++) {
     if (i === 59) {
         keyboardKey.classList.add("alt-right");
     };
-    if (i === 60 || i === 61 || i === 62) {
+    if (i === 60) {
+        keyboardKey.classList.add("case-left");
+    };
+    if (i === 61) {
         keyboardKey.classList.add("case-down");
-    } ''
+    };
+    if (i === 62) {
+        keyboardKey.classList.add("case-right");
+    };
     if (i === 58) {
         keyboardKey.classList.add("space");
     };

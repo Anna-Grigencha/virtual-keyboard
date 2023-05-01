@@ -3,7 +3,6 @@ import { arr } from '../data.js';
 let key = 'en';
 const row3 = document.createElement("div");   //новое
 row3.classList.add("keyboard__row");
-//const lettersRowThree = ["CapsLock", "a", "s", "d", "f", "g", "h", "j", "k", "l", ";", "'", "Enter"];
 
 for (let i = 29; i < 42; i++) {
     const keyboardKey = document.createElement("div");

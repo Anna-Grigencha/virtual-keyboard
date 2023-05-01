@@ -4,7 +4,6 @@ let key = 'en';
 
 const row4 = document.createElement("div");   //новое
 row4.classList.add("keyboard__row");
-//const lettersRowFour = ["Shift", "z", "x", "c", "v", "b", "n", "m", ",", ".", "/", `${String.fromCharCode(9650)}`, "Shift"];
 
 for (let i = 42; i < 55; i++) {
     const keyboardKey = document.createElement("div");
@@ -18,7 +17,7 @@ for (let i = 42; i < 55; i++) {
         keyboardKey.classList.add("shift-right");
     }
     if (i === 53) {
-        keyboardKey.classList.add("case-down");
+        keyboardKey.classList.add("case-up");
     }
 
     keyboardKey.textContent = arr[i][key];

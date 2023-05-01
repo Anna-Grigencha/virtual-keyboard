@@ -2,7 +2,9 @@ import { textarea } from './src/textarea.js';
 import { title } from './src/title.js';
 import { description } from './src/descriprion.js';
 import { language } from './src/language.js';
-import { keyboard } from './src/keyboard.js'
+import { keyboard } from './src/keyboard.js';
+import { arr } from '../data.js';
+
 
 
 document.querySelector("body").classList.add("page");
@@ -28,12 +30,13 @@ const ctrlLeft = document.querySelector(".ctrl-left");
 const ctrlRight = document.querySelector(".ctrl-right");
 const altLeft = document.querySelector(".alt-left");
 const altRight = document.querySelector(".alt-right");
+const win = document.querySelector("win");
 //const textarea = document.querySelector(".textarea");
-console.log(keyboardKey);
+
 
 document.addEventListener('keydown', function (event) {
     for (let i = 0; i < keyboardKey.length; i++) {
-        console.log(event.key);
+
         //UpperCase() method returns the value of the string converted to uppercase
         if (event.code === "Space") {
             space.classList.add('active');
@@ -56,13 +59,19 @@ document.addEventListener('keydown', function (event) {
         if (event.code === "AltRight") {
             altRight.classList.add('active');
         }
+        /*  if (event.key === "MetaLeft") {
+              win.classList.add('active');
+          }*/
 
         if (keyboardKey[i].innerHTML === event.key && event.key !== "Shift" && event.key !== "Alt") {
             keyboardKey[i].classList.add('active');
         };
+
     };
 
-    if (event.key !== "Backspace" && event.key !== "Tab" && event.key !== "CapsLock" && event.key !== "Shift" && event.key !== "Control" && event.key !== "Alt") {
+    if (event.key !== "Backspace" && event.key !== "Tab" && event.key !== "CapsLock" && event.key !== "Shift"
+        && event.key !== "Control" && event.key !== "Alt" && event.key !== "Enter" && event.key !== "Delete"
+        && event.key !== "ArrowUp" && event.key !== "ArrowDown" && event.key !== "ArrowLeft" && event.key !== "ArrowRight" && event.key !== "Meta") {
         textarea.innerHTML += event.key;
     }
 
@@ -70,8 +79,6 @@ document.addEventListener('keydown', function (event) {
         textarea.innerHTML = textarea.innerHTML.slice(0, -1);
     }
 })
-
-
 document.addEventListener('keyup', function () {
     for (let j = 0; j < keyboardKey.length; j++) {
         if (keyboardKey[j].classList.contains('active')) {
