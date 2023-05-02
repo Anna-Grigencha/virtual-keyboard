@@ -5,8 +5,6 @@ import { language } from './src/language.js';
 import { keyboard } from './src/keyboard.js';
 import { arr } from '../data.js';
 
-
-
 document.querySelector("body").classList.add("page");
 const page = document.querySelector(".page");
 
@@ -19,8 +17,6 @@ centralizer.append(textarea);
 centralizer.append(keyboard);
 centralizer.append(description);
 centralizer.append(language);
-
-
 
 const keyboardKey = document.querySelectorAll(".keyboard__key");
 const space = document.querySelector(".space");
@@ -36,8 +32,6 @@ const arrowUp = document.querySelector(".case-up");
 const arrowDown = document.querySelector(".case-down");
 const arrowLeft = document.querySelector(".case-left");
 const arrowRight = document.querySelector(".case-right");
-
-
 
 const win = document.querySelector("win");
 //const textarea = document.querySelector(".textarea");
@@ -171,7 +165,6 @@ document.addEventListener('keydown', function (event) {
                 key = 'EN';
             }
         }
-
     }
 
     if (event.key !== "Backspace" && event.key !== "Tab" && event.key !== "CapsLock" && event.key !== "Shift"
