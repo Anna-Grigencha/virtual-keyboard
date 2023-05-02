@@ -41,7 +41,6 @@ let lang = 'en';
 document.addEventListener('keydown', function (event) {
     for (let i = 0; i < keyboardKey.length; i++) {
 
-        console.log(event.code);
 
         //UpperCase() method returns the value of the string converted to uppercase
         if (event.code === "Space") {
@@ -90,7 +89,7 @@ document.addEventListener('keydown', function (event) {
     if (event.key === "CapsLock") {
         if (key === 'en' && lang === 'en') {
             for (let i = 0; i < keyboardKey.length; i++) {
-                if (arr[i].printable === true) {
+                if (arr[i]['printable'] === true) {
                     keyboardKey[i].innerHTML = arr[i]['EN'];
                 };
             }
@@ -98,7 +97,7 @@ document.addEventListener('keydown', function (event) {
         }
         else if (key === 'EN' && lang === 'en') {
             for (let i = 0; i < keyboardKey.length; i++) {
-                if (arr[i].printable === true) {
+                if (arr[i]['printable'] === true) {
                     keyboardKey[i].innerHTML = arr[i]['en'];
                 };
             }
@@ -107,7 +106,7 @@ document.addEventListener('keydown', function (event) {
 
         else if (key === 'ru' && lang === 'ru') {
             for (let i = 0; i < keyboardKey.length; i++) {
-                if (arr[i].printable === true) {
+                if (arr[i]['printable'] === true) {
                     keyboardKey[i].innerHTML = arr[i]['RU'];
                 };
             }
@@ -116,14 +115,13 @@ document.addEventListener('keydown', function (event) {
 
         else if (key === 'RU' && lang === 'ru') {
             for (let i = 0; i < keyboardKey.length; i++) {
-                if (arr[i].printable === true) {
+                if (arr[i]['printable'] === true) {
                     keyboardKey[i].innerHTML = arr[i]['ru'];
                 };
             }
             key = 'ru';
         }
 
-        console.log(key);
     }
 
     if (shiftLeft.classList.contains('active') && altLeft.classList.contains('active')) {
@@ -131,7 +129,7 @@ document.addEventListener('keydown', function (event) {
             lang = 'ru';
             if (key === 'en') {
                 for (let i = 0; i < keyboardKey.length; i++) {
-                    if (arr[i].printable === true) {
+                    if (arr[i]['printable'] === true) {
                         keyboardKey[i].innerHTML = arr[i]['ru'];
                     };
                 }
@@ -139,7 +137,7 @@ document.addEventListener('keydown', function (event) {
             }
             else if (key === 'EN') {
                 for (let i = 0; i < keyboardKey.length; i++) {
-                    if (arr[i].printable === true) {
+                    if (arr[i]['printable'] === true) {
                         keyboardKey[i].innerHTML = arr[i]['RU'];
                     };
                 }
@@ -150,7 +148,7 @@ document.addEventListener('keydown', function (event) {
             lang = 'en';
             if (key === 'ru') {
                 for (let i = 0; i < keyboardKey.length; i++) {
-                    if (arr[i].printable === true) {
+                    if (arr[i]['printable'] === true) {
                         keyboardKey[i].innerHTML = arr[i]['en'];
                     };
                 }
@@ -158,7 +156,7 @@ document.addEventListener('keydown', function (event) {
             }
             else if (key === 'RU') {
                 for (let i = 0; i < keyboardKey.length; i++) {
-                    if (arr[i].printable === true) {
+                    if (arr[i]['printable'] === true) {
                         keyboardKey[i].innerHTML = arr[i]['EN'];
                     };
                 }
@@ -189,7 +187,7 @@ document.addEventListener('keyup', function () {
 for (let i = 0; i < keyboardKey.length; i++) {
     keyboardKey[i].addEventListener('mousedown', function () {
         keyboardKey[i].classList.add('active');
-        if (arr[i].printable === true) {
+        if (arr[i]['printable'] === true) {
             textarea.innerHTML += keyboardKey[i].innerHTML;
         }
     })
@@ -209,7 +207,6 @@ space.addEventListener('mousedown', function () {
 backspace.addEventListener('mousedown', function () {
     //x.classList.add('active');
     textarea.innerHTML = textarea.innerHTML.slice(0, -1);
-    console.log('drhgdg');
 })
 
 /*capslock.addEventListener('mousedown', function () {
