@@ -1,6 +1,7 @@
 import { arr } from './data.js';
 
-let key = 'en';
+let key = sessionStorage.getItem('key') || 'en';
+
 
 const row2 = document.createElement("div");   //новое
 row2.classList.add("keyboard__row");
