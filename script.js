@@ -27,7 +27,7 @@ const ctrlRight = document.querySelector(".ctrl-right");
 const altLeft = document.querySelector(".alt-left");
 const altRight = document.querySelector(".alt-right");
 const backspace = document.querySelector(".backspace");
-const capslock = document.querySelector(".capslock");
+const capsLock = document.querySelector(".capsLock");
 const arrowUp = document.querySelector(".case-up");
 const arrowDown = document.querySelector(".case-down");
 const arrowLeft = document.querySelector(".case-left");
@@ -209,25 +209,44 @@ backspace.addEventListener('mousedown', function () {
     textarea.innerHTML = textarea.innerHTML.slice(0, -1);
 })
 
-/*capslock.addEventListener('mousedown', function () {
-    console.log('sdljsd');
-    if (key === 'en') {
+capsLock.addEventListener('mousedown', function () {
+
+    if (key === 'en' && lang === 'en') {
         for (let i = 0; i < keyboardKey.length; i++) {
-            if (arr[i].printable === true) {
+            if (arr[i]['printable'] === true) {
                 keyboardKey[i].innerHTML = arr[i]['EN'];
             };
         }
         key = 'EN';
     }
-    else if (key === 'EN') {
+    else if (key === 'EN' && lang === 'en') {
         for (let i = 0; i < keyboardKey.length; i++) {
-            if (arr[i].printable === true) {
+            if (arr[i]['printable'] === true) {
                 keyboardKey[i].innerHTML = arr[i]['en'];
             };
         }
         key = 'en';
     }
-})*/
+
+    else if (key === 'ru' && lang === 'ru') {
+        for (let i = 0; i < keyboardKey.length; i++) {
+            if (arr[i]['printable'] === true) {
+                keyboardKey[i].innerHTML = arr[i]['RU'];
+            };
+        }
+        key = 'RU';
+    }
+
+    else if (key === 'RU' && lang === 'ru') {
+        for (let i = 0; i < keyboardKey.length; i++) {
+            if (arr[i]['printable'] === true) {
+                keyboardKey[i].innerHTML = arr[i]['ru'];
+            };
+        }
+        key = 'ru';
+    }
+
+})
 
 
 
