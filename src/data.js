@@ -70,9 +70,6 @@ const arr = [
     { 'en': `${String.fromCharCode(9658)}`, 'EN': `${String.fromCharCode(9658)}`, 'ru': `${String.fromCharCode(9658)}`, 'RU': `${String.fromCharCode(9658)}`, 'printable': false, 'size': 1, 'color': 'light' },
     { 'en': 'Ctrl', 'EN': 'Ctrl', 'ru': 'Ctrl', 'RU': 'Ctrl', 'printable': false, 'size': 1, 'color': 'light' }
 
-
-
-
 ]
 
 //console.log(arr);

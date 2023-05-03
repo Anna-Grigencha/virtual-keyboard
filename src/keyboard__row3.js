@@ -1,4 +1,4 @@
-import { arr } from '../data.js';
+import { arr } from './data.js';
 
 let key = 'en';
 const row3 = document.createElement("div");   //новое

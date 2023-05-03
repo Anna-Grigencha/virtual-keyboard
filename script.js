@@ -3,7 +3,7 @@ import { title } from './src/title.js';
 import { description } from './src/descriprion.js';
 import { language } from './src/language.js';
 import { keyboard } from './src/keyboard.js';
-import { arr } from '../data.js';
+import { arr } from './src/data.js';
 
 document.querySelector("body").classList.add("page");
 const page = document.querySelector(".page");
